@@ -57,6 +57,22 @@ export const Info = styled.Text`
   margin-bottom: 24px;
 `;
 
+export const ButtonsContainer = styled.View`
+  justify-content: space-between;
+  flex-direction: row;
+`;
+
+export const ReturnButtonWrapper = styled.View`
+  justify-content: center;
+  align-items: center;
+  background: #9c9a9a;
+  border-radius: 10px;
+  margin-top: 8px;
+  border: 1px solid #7a7a7a;
+  border-bottom-color: #7a7a7a;
+  border-bottom-width: 4px;
+  width: 32%;
+`;
 export const SubmitButtonWrapper = styled.View`
   justify-content: center;
   align-items: center;
@@ -66,6 +82,7 @@ export const SubmitButtonWrapper = styled.View`
   border: 1px solid #b90000;
   border-bottom-color: #b90000;
   border-bottom-width: 4px;
+  width: 32%;
 `;
 
 export const SubmitButton = styled(RectButton)`
@@ -73,14 +90,14 @@ export const SubmitButton = styled(RectButton)`
   width: 100%;
   align-items: center;
   border-radius: 10px;
-  padding: 15px;
+  padding: 12px;
   opacity: ${props => (props.loading ? 0.7 : 1)};
 `;
 
 export const TextButton = styled.Text`
   font-family: 'CiutadellaRounded-Regular2';
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const FooterContainer = styled.View`

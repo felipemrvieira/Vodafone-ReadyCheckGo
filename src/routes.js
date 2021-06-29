@@ -17,8 +17,8 @@ export default function Routes() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="DeviceLogin" component={DeviceLogin} />
         <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="DeviceLogin" component={DeviceLogin} />
       </Stack.Navigator>
     </NavigationContainer>
   );

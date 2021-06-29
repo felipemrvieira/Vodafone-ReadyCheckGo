@@ -8,7 +8,7 @@ import Routes from './routes';
 export default function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle="light-content" backgroundColor="#f00000" />
+      <StatusBar barStyle="light-content" backgroundColor="#b90000" />
       <Routes />
     </SafeAreaProvider>
   );

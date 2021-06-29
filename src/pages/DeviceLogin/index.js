@@ -4,10 +4,12 @@ import {ScrollView} from 'react-native';
 import {
   Container,
   SubmitButton,
+  ReturnButtonWrapper,
   TextButton,
   LogoContainer,
   Logo,
   LabelWelcome,
+  ButtonsContainer,
   SubmitButtonWrapper,
   FooterContainer,
   Version,
@@ -63,11 +65,25 @@ export default function Welcome({navigation}) {
               />
             </InputContainer>
 
-            <SubmitButtonWrapper>
-              <SubmitButton onPress={() => navigation.navigate('Welcome')}>
-                <TextButton>Continuar</TextButton>
-              </SubmitButton>
-            </SubmitButtonWrapper>
+            <ButtonsContainer>
+              <ReturnButtonWrapper>
+                <SubmitButton onPress={() => navigation.goBack()}>
+                  <TextButton>Voltar</TextButton>
+                </SubmitButton>
+              </ReturnButtonWrapper>
+
+              <SubmitButtonWrapper>
+                <SubmitButton onPress={() => navigation.navigate('Welcome')}>
+                  <TextButton>QR</TextButton>
+                </SubmitButton>
+              </SubmitButtonWrapper>
+
+              <SubmitButtonWrapper>
+                <SubmitButton onPress={() => navigation.navigate('Welcome')}>
+                  <TextButton>Continuar</TextButton>
+                </SubmitButton>
+              </SubmitButtonWrapper>
+            </ButtonsContainer>
           </Form>
         </InfoContainer>
 
