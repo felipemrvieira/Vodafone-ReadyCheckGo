@@ -8,6 +8,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Welcome from './pages/Welcome';
 import DeviceLogin from './pages/DeviceLogin';
 import DeviceLoginValidation from './pages/DeviceLoginValidation';
+import Installation from './pages/Installation';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ export default function Routes() {
         screenOptions={{
           headerShown: false,
         }}>
+        <Stack.Screen name="Installation" component={Installation} />
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="DeviceLogin" component={DeviceLogin} />
         <Stack.Screen
