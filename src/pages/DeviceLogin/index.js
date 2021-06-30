@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {
   Container,
@@ -24,7 +25,7 @@ import {
   Input,
 } from './styles';
 
-export default function Welcome({navigation}) {
+export default function DeviceLogin({navigation}) {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -74,12 +75,15 @@ export default function Welcome({navigation}) {
 
               <SubmitButtonWrapper>
                 <SubmitButton onPress={() => navigation.navigate('Welcome')}>
-                  <TextButton>QR</TextButton>
+                  <TextButton>
+                    <Icon name="qr-code-2" size={30} color="white" />
+                  </TextButton>
                 </SubmitButton>
               </SubmitButtonWrapper>
 
               <SubmitButtonWrapper>
-                <SubmitButton onPress={() => navigation.navigate('Welcome')}>
+                <SubmitButton
+                  onPress={() => navigation.navigate('DeviceLoginValidation')}>
                   <TextButton>Continuar</TextButton>
                 </SubmitButton>
               </SubmitButtonWrapper>
@@ -88,7 +92,7 @@ export default function Welcome({navigation}) {
         </InfoContainer>
 
         <FooterContainer>
-          <Version>4.0 Beta</Version>
+          <Version>Beta version</Version>
 
           <LogoVodafoneContainer>
             <LogoVodafone source={require('./images/vrcg_business_logo.png')} />

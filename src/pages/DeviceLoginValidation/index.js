@@ -1,14 +1,12 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
+import {ActivityIndicator} from 'react-native-paper';
 
 import {
   Container,
-  SubmitButton,
-  TextButton,
   LogoContainer,
   Logo,
   LabelWelcome,
-  SubmitButtonWrapper,
   FooterContainer,
   Version,
   AppTitle,
@@ -18,7 +16,7 @@ import {
   Info,
 } from './styles';
 
-export default function Welcome({navigation}) {
+export default function DeviceLoginValidation({navigation}) {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -29,19 +27,13 @@ export default function Welcome({navigation}) {
           <LogoContainer>
             <Logo source={require('./images/icon_100px.png')} />
           </LogoContainer>
-          <LabelWelcome>Bem vindo ao EvolutionCheck</LabelWelcome>
+          <LabelWelcome>Verificação</LabelWelcome>
           <Info>
-            Antes de poder executar e utilizar a aplicação, deverá verificar e
-            confirmar algumas definições e autorizações. Por favor, indique a
-            língua e orientação do dispositivo que deseja utilizar. Note que
-            estas definições podem ser alteradas posteriormente em: "Menu -
-            Configurações de sistema"
+            Aguarde por favor! A aplicação está a validar os dados de
+            Verificação e Autorização na plataforma ReadyCheckGo. Uma vez
+            submetidos e validados, esta informação deixará de ser apresentada.
           </Info>
-          <SubmitButtonWrapper>
-            <SubmitButton onPress={() => navigation.navigate('DeviceLogin')}>
-              <TextButton>Continuar</TextButton>
-            </SubmitButton>
-          </SubmitButtonWrapper>
+          <ActivityIndicator size={80} color="#b90000" />
         </InfoContainer>
 
         <FooterContainer>
