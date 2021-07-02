@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ScrollView} from 'react-native';
 import {ActivityIndicator} from 'react-native-paper';
 
@@ -17,6 +17,11 @@ import {
 } from './styles';
 
 export default function DeviceLoginValidation({navigation}) {
+  useEffect(() => {
+    const goForward = () => navigation.navigate('Installation');
+    setTimeout(goForward, 3000);
+  }, []);
+
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}

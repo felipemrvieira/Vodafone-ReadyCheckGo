@@ -23,6 +23,8 @@ export default function Installation({navigation}) {
     const updateProgress = () => setProgress2(progress2 + 0.01);
     if (progress2 < 1.0) {
       setTimeout(updateProgress, 5);
+    } else {
+      navigation.navigate('MainMenu');
     }
   }, [progress2]);
 
