@@ -49,7 +49,9 @@ export default function MainMenu({navigation}) {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{flexGrow: 1}}>
         <Container>
-          <MenuItem>
+          <MenuItem
+            title="interventions"
+            onPress={() => navigation.navigate('Interventions')}>
             <MenuIconContainer>
               <Icon name="fact-check" size={40} color="#555555" />
             </MenuIconContainer>

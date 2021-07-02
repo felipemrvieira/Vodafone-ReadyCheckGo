@@ -10,6 +10,7 @@ import DeviceLogin from './pages/DeviceLogin';
 import DeviceLoginValidation from './pages/DeviceLoginValidation';
 import Installation from './pages/Installation';
 import MainMenu from './pages/MainMenu';
+import Interventions from './pages/Interventions';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export default function Routes() {
         />
         <Stack.Screen name="Installation" component={Installation} />
         <Stack.Screen name="MainMenu" component={MainMenu} />
+        <Stack.Screen name="Interventions" component={Interventions} />
       </Stack.Navigator>
     </NavigationContainer>
   );

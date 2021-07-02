@@ -6,39 +6,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export const Container = styled.View`
   flex: 1;
   padding: 20px 30px;
-  background: #fff;
+  background: #e5e9ec;
   justify-content: space-between;
-`;
-
-export const MenuItem = styled(RectButton)`
-  flex-direction: row;
-  background: #fff;
-  justify-content: space-between;
-  margin-bottom: 22px;
-  box-shadow: 10px 5px 5px black;
-  elevation: 5;
-  opacity: ${props => (props.loading ? 0.7 : 1)};
-`;
-
-export const MenuIconContainer = styled(RectButton)`
-  padding: 30px;
-  background: #f0f0f0;
-`;
-
-export const MenuTextContainer = styled(LinearGradient).attrs({
-  colors: ['#ef0000', '#bf0000', '#8d0000'],
-  start: {x: 0, y: 0},
-  end: {x: 0, y: 1},
-})`
-  padding: 20px 30px;
-  flex: 1;
-`;
-
-export const MenuText = styled.Text`
-  margin: 10px 0;
-  color: #fff;
-  font-family: 'CiutadellaRounded-Regular2';
-  font-size: 24px;
 `;
 
 export const Header = styled.View`
@@ -108,4 +77,71 @@ export const Version = styled.Text`
 
 export const FooterIcon = styled(Icon)`
   align-self: center;
+`;
+
+export const MenuIcon = styled(Icon)`
+  align-self: center;
+  margin-left: 12px;
+`;
+
+export const PageTitle = styled.Text`
+  font-family: 'CiutadellaRounded-Bold';
+  text-align: center;
+  color: #f00000;
+  align-self: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 12px;
+`;
+
+export const Intervention = styled.View`
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px black;
+  elevation: 0;
+  border-radius: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const InterventionIconContainer = styled.View`
+  background: ${props => props.color};
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  flex-direction: row;
+  justify-content: center;
+`;
+export const InterventionIcon = styled.Text`
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  /* background: red; */
+`;
+
+export const InterventionInfo = styled.View``;
+
+export const InterventionInfoTitle = styled.Text`
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  /* background: red; */
+`;
+
+export const InterventionInfoSubtitle = styled.Text`
+  color: #c8c8c8;
+  font-size: 14px;
+  text-align: left;
+  /* background: red; */
+`;
+
+export const Return = styled(RectButton)`
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
 `;
